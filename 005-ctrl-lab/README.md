@@ -1,0 +1,1 @@
+The difficulty relies on how to translate other signals (e.g gesture, brain signal) into signals computers can understand.

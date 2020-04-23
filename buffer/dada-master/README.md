@@ -1,0 +1,1 @@
+You have high standards but are willing to make tradeoffs to get stuff done.

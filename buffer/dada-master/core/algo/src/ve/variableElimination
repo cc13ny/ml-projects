@@ -1,0 +1,18 @@
+%function [ vFactor, eFactor, varFactors, evidFactors, order, nodeNames] = variableElimination(queryVars, evidences)
+function [ cprob, varFactors, evidFactors, order, nodeNames] = variableElimination(queryVars, evidences)
+% Eliminate variables by an elimination ordering.
+% Here, the min-fill heuristic is used to choose an elimination ordering
+
+%% Setup
+[ M, Factors, nodeNames ] = graph_preprocess;
+
+%% Use the min-fill heuristic to choose an elimination ordering
+[ order ] = minFillElimOrder(M, nodeNames);
+
+%% Exact inference based on the query of variables and the order
+[ varFactors, evidFactors, cprob] =  condProbQuery(Factors, nodeNames, order, queryVars, evidences);
+%[varFactors, evidFactors, vFactor, eFactor] =  condProbQuery( Factors, nodeNames, order, queryVars, evidences);
+
+
+
+end

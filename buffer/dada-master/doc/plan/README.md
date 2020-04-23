@@ -1,0 +1,3 @@
+1. HMM
+2. LSTM
+3. RNN

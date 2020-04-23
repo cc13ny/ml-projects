@@ -1,0 +1,1 @@
+text_file = sc.textFile("hdfs://...")
